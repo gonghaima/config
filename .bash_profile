@@ -3,12 +3,20 @@
 ############
 #  format  #
 ############
+# refresh profile
+alias pr='. ~/.bash_profile'
+alias bs="code ~/.bash_profile"
+alias bp="code ~/.bash_profile"
+alias t='npm test'
+#kill port
+alias p='npx kill-port '
 #alias name=value
 #alias name='command'
 #alias name='command arg1 arg2'
 #alias name='/path/to/script'
 #alias name='/path/to/script.pl arg1'
 #unalias aliasname
+
 alias tm="cd /Users/s110535/temp"
 alias sd="cd /Users/s110535/study"
 alias n="open -a Terminal "`pwd`""
@@ -20,8 +28,8 @@ alias op="open `pwd`"
 alias tq="curl wttr.in/shenzhen"
 
 # brew
-alias bs="brew services"
-alias bsl="brew services list"
+# alias bs="brew services"
+# alias bsl="brew services list"
 
 # editor
 alias vi="vim"
@@ -210,18 +218,23 @@ alias gbru='git remote prune origin'
 alias gbd='git branch -D'
 alias gc='git commit -m'
 alias gcl='git clone'
+alias gcd='git clean -fd'
 alias gco='git checkout'
 alias gcp='git cherry-pick'
 alias gclean='git fetch --prune'
 alias gd='git diff'
 alias gdi='git di'
 alias gr='git rm'
+alias grh='git reset --hard'
 alias gs='git status'
-alias gss='git status -s'
+alias gss='git status -s'k
 alias gst='git stash'
+alias gsa='git stash apply'
+alias gso='git checkout stash@{0} -- '  #apply one file from stash - filename as a param
 alias gl='git log'
 alias gll='git lg'
 alias gull='git pull origin'
+alias gro='git remote show origin'
 alias gp='git pull'
 alias gps='git push'
 alias gush='git push origin'
@@ -240,5 +253,8 @@ alias gcc='git clean cache -f'
 #alias gexport='git archive --format zip --output'
 #alias gmu='git fetch origin -v; git fetch upstream -v; git merge upstream/master'
 
-# refresh profile
-alias pr='. ~/.bash_profile'
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

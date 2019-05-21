@@ -4,6 +4,7 @@
 #  format  #
 ############
 # refresh profile
+alias .='code .'
 alias pr='. ~/.bash_profile'
 alias bs="code ~/.bash_profile"
 alias bp="code ~/.bash_profile"
@@ -17,9 +18,10 @@ alias p='npx kill-port '
 #alias name='/path/to/script.pl arg1'
 #unalias aliasname
 
-alias tm="cd /Users/s110535/temp"
-alias sd="cd /Users/s110535/study"
-alias n="open -a Terminal "`pwd`""
+alias tm="cd /Users/stevengong/temp"
+alias wk="cd /Users/stevengong/work/Github"
+alias sd="cd /Users/stevengong/study"
+alias n="open -a Terminal `pwd`"
 function k () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 alias d="rm -rf $1"
 alias o="open ."
@@ -46,6 +48,7 @@ alias wl='wc -l'    #统计行数
 alias c="clear"   #清屏
 alias cls="clear"   #清屏
 
+alias h='pwd|pbcopy' # copy current path to clickboard
 alias cp='cp -v'
 alias cpr='cp -r'
 alias mv='mv -v'
@@ -212,9 +215,16 @@ alias pt='ptpython'
 
 # Git shortcuts
 alias ga='git add .'
+
+alias gg='git config user.email "gonghaima@hotmail.com"'
+alias gw='git config user.email "hgong@woolworths.com.au"'
+alias ge='git config user.email'
+
 alias gb='git branch'
 alias gba='git branch -a'
+alias gbr='git remote rm origin'
 alias gbru='git remote prune origin'
+alias gro='git remote show origin'
 alias gbd='git branch -D'
 alias gc='git commit -m'
 alias gcl='git clone'
@@ -227,14 +237,14 @@ alias gdi='git di'
 alias gr='git rm'
 alias grh='git reset --hard'
 alias gs='git status'
-alias gss='git status -s'k
+alias gss='git status -s'
 alias gst='git stash'
 alias gsa='git stash apply'
+alias gsk='git add . && git stash save --keep-index'
 alias gso='git checkout stash@{0} -- '  #apply one file from stash - filename as a param
 alias gl='git log'
 alias gll='git lg'
 alias gull='git pull origin'
-alias gro='git remote show origin'
 alias gp='git pull'
 alias gps='git push'
 alias gush='git push origin'
